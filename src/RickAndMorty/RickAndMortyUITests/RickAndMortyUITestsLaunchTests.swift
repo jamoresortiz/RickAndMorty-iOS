@@ -1,13 +1,13 @@
 //
-//  Rick_MortyUITestsLaunchTests.swift
-//  Rick&MortyUITests
+//  RickAndMortyUITestsLaunchTests.swift
+//  RickAndMortyUITests
 //
 //  Created by Jorge Amores on 15/3/22.
 //
 
 import XCTest
 
-class Rick_MortyUITestsLaunchTests: XCTestCase {
+class RickAndMortyUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

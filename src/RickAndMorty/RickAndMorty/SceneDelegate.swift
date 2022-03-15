@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Rick&Morty
+//  RickAndMorty
 //
 //  Created by Jorge Amores on 15/3/22.
 //
