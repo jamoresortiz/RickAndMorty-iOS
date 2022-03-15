@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  RickAndMorty
-//
-//  Created by Jorge Amores on 15/3/22.
-//
-
 import UIKit
 import CoreData
 

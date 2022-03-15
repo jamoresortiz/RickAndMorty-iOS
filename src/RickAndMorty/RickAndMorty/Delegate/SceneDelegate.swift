@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  RickAndMorty
-//
-//  Created by Jorge Amores on 15/3/22.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
