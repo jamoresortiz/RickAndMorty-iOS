@@ -1,21 +1,22 @@
-//
-//  CharacterListTableViewController.swift
-//  RickAndMorty
-//
-//  Created by Jorge Amores on 17/3/22.
-//
-
 import UIKit
 
 class CharacterListTableViewController: UITableViewController {
 
-    private let characterCellId = "characterCellId"
+    // Dependencies
     weak var rootViewController: CharacterListViewInterface?
-    private var characterList: [Character]?
+
+    // Params
+    private let characterCellId = "characterCellId"
+    private var characterListViewData = [CharacterViewData]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+    }
+
+    func configure(characterListViewData: [CharacterViewData]) {
+        self.characterListViewData = characterListViewData
+        tableView.reloadData()
     }
 
 }
@@ -27,7 +28,7 @@ extension CharacterListTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return characterList?.count ?? 0
+        return characterListViewData.count
     }
 
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -36,12 +37,20 @@ extension CharacterListTableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
-            let character = characterList?[indexPath.row]
+            let character = characterListViewData[safe: indexPath.row]
         else {
             return UITableViewCell()
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: characterCellId, for: indexPath) as? CharacterViewCell
+        cell?.configure(
+            image: character.image,
+            name: character.name
+        )
         return cell ?? UITableViewCell()
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        rootViewController?.didSelect(at: indexPath.row)
     }
 }
 
@@ -49,7 +58,7 @@ private extension CharacterListTableViewController {
 
     func setupView() {
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .clear
-        tableView.register(<#T##nib: UINib?##UINib?#>, forCellReuseIdentifier: characterCellId)
+        tableView.backgroundColor = .white
+        tableView.register(CharacterViewCell.self, forCellReuseIdentifier: characterCellId)
     }
 }

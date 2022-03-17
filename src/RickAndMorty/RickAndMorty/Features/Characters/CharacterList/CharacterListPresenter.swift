@@ -3,10 +3,14 @@ import Moya
 
 final class CharacterListPresenter {
 
+    // Dependencies
     weak var view: CharacterListViewInterface?
     private let wireframe: CharacterListWireframeInterface
     private let interactor: CharacterListInteractorInterface
+
+    // Params
     private let disposeBag: DisposeBag
+    private var characterList: [Character]?
 
     init(wireframe: CharacterListWireframeInterface,
          interactor: CharacterListInteractorInterface) {
@@ -19,6 +23,7 @@ final class CharacterListPresenter {
 extension CharacterListPresenter: CharacterListPresenterInterface {
 
     func viewReady() {
+        view?.set(title: "Rick & Morty")
         getCharacters()
     }
 
@@ -27,7 +32,17 @@ extension CharacterListPresenter: CharacterListPresenterInterface {
     }
 
     func didSelect(character: Character) {
-        wireframe.presentDetail(character: character)
+        wireframe.presentDetailOf(character: character)
+    }
+
+    func didSelect(at row: Int) {
+        guard
+            let character = characterList?[safe: row]
+        else {
+            assertionFailure("Fail to select a character")
+            return
+        }
+        wireframe.presentDetailOf(character: character)
     }
 }
 
@@ -40,12 +55,32 @@ private extension CharacterListPresenter {
                 self?.view?.hideLoading()
                 switch $0 {
                 case let .success(result):
-                    // TODO 😖
                     print("Result: \(result)")
+                    self?.handleSuccess(characterList: result)
                 case let .error(error):
                     // TODO 😖
                     print("Error: \(error)")
                 }
             }.disposed(by: disposeBag)
+    }
+
+    func handleSuccess(characterList: [Character]) {
+        self.characterList = characterList
+        if characterList.isEmpty {
+            view?.showNoDataView()
+        } else {
+            let characterListViewData = makeCharacterListViewData(characterList: characterList)
+            view?.configureTableView(characterListViewData: characterListViewData)
+        }
+    }
+
+    func makeCharacterListViewData(characterList: [Character]) -> [CharacterViewData] {
+        characterList.compactMap {
+            return CharacterViewData(
+                // TODO Image 😖
+                image: UIImage(),
+                name: $0.name
+            )
+        }
     }
 }

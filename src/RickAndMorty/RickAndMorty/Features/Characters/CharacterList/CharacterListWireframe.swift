@@ -4,7 +4,7 @@ final class CharacterListWireframe: CharacterListWireframeInterface {
 
     weak var view: UIViewController?
 
-    func presentDetail(character: Character) {
+    func presentDetailOf(character: Character) {
         // TODO 😖
     }
 

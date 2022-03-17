@@ -1,20 +1,22 @@
 import RxSwift
 
 protocol CharacterListViewInterface: AnyObject {
+    func set(title: String)
+    func configureTableView(characterListViewData: [CharacterViewData])
     func showLoading()
     func hideLoading()
     func showNoDataView()
-    func didSelect(character: Character)
+    func didSelect(at row: Int)
 }
 
 protocol CharacterListPresenterInterface {
     func viewReady()
     func retryButtonPressed()
-    func didSelect(character: Character)
+    func didSelect(at row: Int)
 }
 
 protocol CharacterListWireframeInterface {
-    func presentDetail(character: Character)
+    func presentDetailOf(character: Character)
     func presentFavCharacters()
 }
 
