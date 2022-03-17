@@ -16,7 +16,7 @@ extension CharactersRepository: CharactersRepositoryInterface {
         return provider.rx
             .request(.getCharacters(page: page))
             .catchError { _ in
-                return .error(DomainError.someError)
+                return .error(NetworkError.someError)
             }
             .filterSuccessfulStatusAndRedirectCodes()
             .map(CharactersResponse.self)
@@ -24,7 +24,7 @@ extension CharactersRepository: CharactersRepositoryInterface {
                 if let characters = CharactersMapper.mapToCharacters(from: $0) {
                     return .just(characters)
                 }
-                return .error(DomainError.someError)
+                return .error(NetworkError.someError)
             }
     }
 }

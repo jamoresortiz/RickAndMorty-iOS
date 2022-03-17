@@ -7,8 +7,10 @@ public enum CharactersTarget {
 extension CharactersTarget: Moya.TargetType {
 
     public var baseURL: URL {
-        guard let url = URL(string: Environment.baseURL) else {
-            fatalError("baseURL can not be configured")
+        guard
+            let url = URL(string: Environment.characterBaseURL)
+        else {
+            fatalError("BaseURL can not be configured")
         }
         return url
     }
@@ -16,7 +18,7 @@ extension CharactersTarget: Moya.TargetType {
     public var path: String {
         switch self {
         case .getCharacters:
-            return "/characters"
+            return "/character"
         }
     }
 

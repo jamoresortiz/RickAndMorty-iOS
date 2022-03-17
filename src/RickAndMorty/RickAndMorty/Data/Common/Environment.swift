@@ -1,3 +1,3 @@
 public final class Environment {
-    public static let baseURL = "https://rickandmortyapi.com/api"
+    public static var characterBaseURL = "https://rickandmortyapi.com/api"
 }
