@@ -1,6 +1,6 @@
 import UIKit
 
 struct CharacterViewData {
-    let image: UIImage
+    let imageURL: String
     let name: String
 }

@@ -24,7 +24,7 @@ class CharacterViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(image: UIImage, name: String) {
+    func configure(imageURL: String, name: String) {
         // TODO Image 😖
         self.nameLabel.text = name
     }
@@ -49,5 +49,9 @@ private extension CharacterViewCell {
             bottom: 8,
             trailing: 8
         )
+    }
+
+    func getImage(from stringURL: String) -> UIImage? {
+        return UIImage()
     }
 }

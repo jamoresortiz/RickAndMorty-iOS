@@ -77,8 +77,7 @@ private extension CharacterListPresenter {
     func makeCharacterListViewData(characterList: [Character]) -> [CharacterViewData] {
         characterList.compactMap {
             return CharacterViewData(
-                // TODO Image 😖
-                image: UIImage(),
+                imageURL: $0.image,
                 name: $0.name
             )
         }

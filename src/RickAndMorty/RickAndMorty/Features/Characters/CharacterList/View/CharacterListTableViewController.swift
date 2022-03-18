@@ -43,7 +43,7 @@ extension CharacterListTableViewController {
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: characterCellId, for: indexPath) as? CharacterViewCell
         cell?.configure(
-            image: character.image,
+            imageURL: character.imageURL,
             name: character.name
         )
         return cell ?? UITableViewCell()
