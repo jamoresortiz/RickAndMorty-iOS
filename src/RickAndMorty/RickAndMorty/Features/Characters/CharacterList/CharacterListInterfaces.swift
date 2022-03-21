@@ -29,7 +29,6 @@ protocol CharacterListPresenterInterface {
 
 protocol CharacterListWireframeInterface {
     func presentDetail(of character: Character)
-    func presentFavCharacters()
 }
 
 protocol CharacterListInteractorInterface {

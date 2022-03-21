@@ -23,8 +23,4 @@ extension CharacterListWireframe: CharacterListWireframeInterface {
         let navController = UINavigationController(rootViewController: viewController)
         view?.present(navController, animated: true)
     }
-
-    func presentFavCharacters() {
-        // TODO 😖
-    }
 }
