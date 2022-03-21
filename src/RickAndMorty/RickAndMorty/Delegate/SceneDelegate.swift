@@ -8,8 +8,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.backgroundColor = .systemGroupedBackground
         window?.windowScene = windowScene
-        window?.rootViewController = FeatureConfigurator().prepareScene()
+        let navigationController = UINavigationController(
+            rootViewController: FeatureConfigurator().prepareScene() ?? UIViewController()
+        )
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 

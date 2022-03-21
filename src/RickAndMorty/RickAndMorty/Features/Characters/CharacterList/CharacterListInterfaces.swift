@@ -1,25 +1,42 @@
+import UIKit
 import RxSwift
 
+protocol CharacterListConfiguratorInterface {
+    func prepareScene() -> UIViewController?
+}
+
 protocol CharacterListViewInterface: AnyObject {
-    func set(title: String)
-    func configureTableView(characterListViewData: [CharacterViewData])
+    func initialSetup(with viewData: CharacterListViewData)
+    func fillTableView(with characterList: [Character], canLoadMoreData: Bool, needScrollToTop: Bool)
+    func fillTableView(with characterList: [Character])
+    func toogleFavCharactersButton(dependingOf isFavsShown: Bool)
     func showLoading()
     func hideLoading()
+    func showErrorView()
     func showNoDataView()
-    func didSelect(at row: Int)
+    func showErrorAlert()
+    func hidePlaceholder()
 }
 
 protocol CharacterListPresenterInterface {
     func viewReady()
     func retryButtonPressed()
-    func didSelect(at row: Int)
+    func didSelect(character: Character)
+    func didSelectFav(character: Character)
+    func moreResultsButtonPressed()
+    func favNavButtonPressed()
 }
 
 protocol CharacterListWireframeInterface {
-    func presentDetailOf(character: Character)
+    func presentDetail(of character: Character)
     func presentFavCharacters()
 }
 
 protocol CharacterListInteractorInterface {
-    func getCharacters(page: Int) -> Single<[Character]>
+    func getCharacters(with page: Int) -> Single<Characters>
+    func getFavCharacters() -> [Character]
+    func saveFav(character: Character)
+    func deleteFav(character: Character)
 }
+
+

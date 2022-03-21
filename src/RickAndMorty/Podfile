@@ -6,7 +6,8 @@ target 'RickAndMorty' do
   use_frameworks!
 
   # Pods for RickAndMorty
-  pod 'Moya/RxSwift', '~> 14.0'
+   pod 'Moya/RxSwift', '~> 14.0'
+   pod 'Kingfisher', '~> 7.0'
 
   target 'RickAndMortyTests' do
     inherit! :search_paths

@@ -9,6 +9,6 @@ public final class FeatureConfigurator {
     }
 
     public func prepareScene() -> UIViewController? {
-        CharacterListConfigurator.prepareScene()
+        CharacterListConfigurator().prepareScene()
     }
 }

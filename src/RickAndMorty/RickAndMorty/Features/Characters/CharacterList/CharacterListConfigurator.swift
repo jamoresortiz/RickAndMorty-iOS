@@ -1,9 +1,8 @@
-import Foundation
 import UIKit
 
-final class CharacterListConfigurator {
+final class CharacterListConfigurator: CharacterListConfiguratorInterface {
 
-    static func prepareScene() -> UIViewController? {
+    func prepareScene() -> UIViewController? {
         guard
             let charactersRepository = FeatureDependencies.shared.charactersRepository
         else {
@@ -12,9 +11,12 @@ final class CharacterListConfigurator {
         }
 
         let interactor = CharacterListInteractor(
-            charactersRepository: charactersRepository
+            charactersRepository: charactersRepository,
+            localProvider: LocalProvider(defaults: UserDefaults.standard)
         )
-        let wireframe = CharacterListWireframe()
+        let wireframe = CharacterListWireframe(
+            characterDetailConfiguratorInterface: CharacterDetailConfigurator()
+        )
         let presenter = CharacterListPresenter(
             wireframe: wireframe,
             interactor: interactor
