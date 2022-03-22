@@ -45,6 +45,7 @@ private extension CharactersMapper {
             status: status,
             species: species,
             image: image,
+            isFav: false,
             location: location
         )
     }

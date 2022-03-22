@@ -41,6 +41,23 @@
 		651DCA2E27E3BC14003ACBAA /* CompletionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651DCA2D27E3BC14003ACBAA /* CompletionResult.swift */; };
 		651DCA3127E3BDDA003ACBAA /* Array+SafeSubscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651DCA3027E3BDDA003ACBAA /* Array+SafeSubscript.swift */; };
 		651DCA3327E3C007003ACBAA /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651DCA3227E3C007003ACBAA /* UIView+Subviews.swift */; };
+		655921AC27EA0D5300523C3B /* Spy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921AB27EA0D5300523C3B /* Spy.swift */; };
+		655921AF27EA0DA200523C3B /* SpyComparableInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921AE27EA0DA200523C3B /* SpyComparableInterface.swift */; };
+		655921B127EA0DB900523C3B /* SpyComparer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921B027EA0DB900523C3B /* SpyComparer.swift */; };
+		655921B627EA2E8F00523C3B /* CharacterListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921B527EA2E8F00523C3B /* CharacterListViewMock.swift */; };
+		655921B827EA2E9D00523C3B /* CharacterListPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921B727EA2E9D00523C3B /* CharacterListPresenterMock.swift */; };
+		655921BA27EA2EAB00523C3B /* CharacterListInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921B927EA2EAB00523C3B /* CharacterListInteractorMock.swift */; };
+		655921BC27EA2EB700523C3B /* CharacterListWireframeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921BB27EA2EB700523C3B /* CharacterListWireframeMock.swift */; };
+		655921BF27EA352700523C3B /* AnyCollection+Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921BE27EA352700523C3B /* AnyCollection+Equal.swift */; };
+		655921C227EA370800523C3B /* CharactersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921C127EA370800523C3B /* CharactersFactory.swift */; };
+		655921C627EA3AB000523C3B /* CharacterDetailConfiguratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921C527EA3AB000523C3B /* CharacterDetailConfiguratorMock.swift */; };
+		655921C827EA3BB600523C3B /* CharacterListWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921C727EA3BB600523C3B /* CharacterListWireframeTests.swift */; };
+		655921CA27EA3C4300523C3B /* UIViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921C927EA3C4300523C3B /* UIViewControllerSpy.swift */; };
+		655921CC27EA3C5F00523C3B /* UINavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921CB27EA3C5F00523C3B /* UINavigationControllerSpy.swift */; };
+		655921CE27EA414500523C3B /* CharacterListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921CD27EA414500523C3B /* CharacterListPresenterTests.swift */; };
+		655921D327EA4F6000523C3B /* LocalProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921D227EA4F6000523C3B /* LocalProviderMock.swift */; };
+		655921D527EA501A00523C3B /* CharacterListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921D427EA501A00523C3B /* CharacterListInteractorTests.swift */; };
+		655921D927EA50C800523C3B /* CharacterRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655921D827EA50C800523C3B /* CharacterRepositoryMock.swift */; };
 		65649B3227E11A46000C96E1 /* CharactersRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65649B3127E11A46000C96E1 /* CharactersRepositoryInterface.swift */; };
 		65649B3427E11EBC000C96E1 /* CharactersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65649B3327E11EBC000C96E1 /* CharactersRepository.swift */; };
 		65649B3827E13309000C96E1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65649B3727E13309000C96E1 /* NetworkError.swift */; };
@@ -110,6 +127,23 @@
 		651DCA2D27E3BC14003ACBAA /* CompletionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionResult.swift; sourceTree = "<group>"; };
 		651DCA3027E3BDDA003ACBAA /* Array+SafeSubscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+SafeSubscript.swift"; sourceTree = "<group>"; };
 		651DCA3227E3C007003ACBAA /* UIView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subviews.swift"; sourceTree = "<group>"; };
+		655921AB27EA0D5300523C3B /* Spy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spy.swift; sourceTree = "<group>"; };
+		655921AE27EA0DA200523C3B /* SpyComparableInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyComparableInterface.swift; sourceTree = "<group>"; };
+		655921B027EA0DB900523C3B /* SpyComparer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyComparer.swift; sourceTree = "<group>"; };
+		655921B527EA2E8F00523C3B /* CharacterListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewMock.swift; sourceTree = "<group>"; };
+		655921B727EA2E9D00523C3B /* CharacterListPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListPresenterMock.swift; sourceTree = "<group>"; };
+		655921B927EA2EAB00523C3B /* CharacterListInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListInteractorMock.swift; sourceTree = "<group>"; };
+		655921BB27EA2EB700523C3B /* CharacterListWireframeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListWireframeMock.swift; sourceTree = "<group>"; };
+		655921BE27EA352700523C3B /* AnyCollection+Equal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyCollection+Equal.swift"; sourceTree = "<group>"; };
+		655921C127EA370800523C3B /* CharactersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFactory.swift; sourceTree = "<group>"; };
+		655921C527EA3AB000523C3B /* CharacterDetailConfiguratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailConfiguratorMock.swift; sourceTree = "<group>"; };
+		655921C727EA3BB600523C3B /* CharacterListWireframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListWireframeTests.swift; sourceTree = "<group>"; };
+		655921C927EA3C4300523C3B /* UIViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerSpy.swift; sourceTree = "<group>"; };
+		655921CB27EA3C5F00523C3B /* UINavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerSpy.swift; sourceTree = "<group>"; };
+		655921CD27EA414500523C3B /* CharacterListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListPresenterTests.swift; sourceTree = "<group>"; };
+		655921D227EA4F6000523C3B /* LocalProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProviderMock.swift; sourceTree = "<group>"; };
+		655921D427EA501A00523C3B /* CharacterListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListInteractorTests.swift; sourceTree = "<group>"; };
+		655921D827EA50C800523C3B /* CharacterRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepositoryMock.swift; sourceTree = "<group>"; };
 		65649B3127E11A46000C96E1 /* CharactersRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRepositoryInterface.swift; sourceTree = "<group>"; };
 		65649B3327E11EBC000C96E1 /* CharactersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRepository.swift; sourceTree = "<group>"; };
 		65649B3727E13309000C96E1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -215,6 +249,10 @@
 		651C602B27E0FF5A00EDD38E /* RickAndMortyTests */ = {
 			isa = PBXGroup;
 			children = (
+				655921CF27EA4F2B00523C3B /* Data */,
+				655921C027EA36E100523C3B /* Factories */,
+				655921AA27EA0D4300523C3B /* Utils */,
+				655921A927EA0CB800523C3B /* Features */,
 				651C602C27E0FF5A00EDD38E /* RickAndMortyTests.swift */,
 			);
 			path = RickAndMortyTests;
@@ -361,6 +399,139 @@
 				65C4C08D27E61688009725F7 /* Style.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		655921A927EA0CB800523C3B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				655921B227EA2E4100523C3B /* Characters */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		655921AA27EA0D4300523C3B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				655921AD27EA0D8C00523C3B /* Spy */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		655921AD27EA0D8C00523C3B /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				655921BD27EA351200523C3B /* Extensions */,
+				655921AB27EA0D5300523C3B /* Spy.swift */,
+				655921AE27EA0DA200523C3B /* SpyComparableInterface.swift */,
+				655921B027EA0DB900523C3B /* SpyComparer.swift */,
+				655921C927EA3C4300523C3B /* UIViewControllerSpy.swift */,
+				655921CB27EA3C5F00523C3B /* UINavigationControllerSpy.swift */,
+			);
+			path = Spy;
+			sourceTree = "<group>";
+		};
+		655921B227EA2E4100523C3B /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				655921C327EA3A9600523C3B /* CharacterDetail */,
+				655921B327EA2E4700523C3B /* CharacterList */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		655921B327EA2E4700523C3B /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				655921B427EA2E5200523C3B /* Mocks */,
+				655921C727EA3BB600523C3B /* CharacterListWireframeTests.swift */,
+				655921CD27EA414500523C3B /* CharacterListPresenterTests.swift */,
+				655921D427EA501A00523C3B /* CharacterListInteractorTests.swift */,
+			);
+			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		655921B427EA2E5200523C3B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				655921B527EA2E8F00523C3B /* CharacterListViewMock.swift */,
+				655921B727EA2E9D00523C3B /* CharacterListPresenterMock.swift */,
+				655921B927EA2EAB00523C3B /* CharacterListInteractorMock.swift */,
+				655921BB27EA2EB700523C3B /* CharacterListWireframeMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		655921BD27EA351200523C3B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				655921BE27EA352700523C3B /* AnyCollection+Equal.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		655921C027EA36E100523C3B /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				655921C127EA370800523C3B /* CharactersFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		655921C327EA3A9600523C3B /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				655921C427EA3AA200523C3B /* Mocks */,
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		655921C427EA3AA200523C3B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				655921C527EA3AB000523C3B /* CharacterDetailConfiguratorMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		655921CF27EA4F2B00523C3B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				655921D627EA50A500523C3B /* Network */,
+				655921D127EA4F4200523C3B /* Database */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		655921D027EA4F3500523C3B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				655921D227EA4F6000523C3B /* LocalProviderMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		655921D127EA4F4200523C3B /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				655921D027EA4F3500523C3B /* Mocks */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		655921D627EA50A500523C3B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				655921D727EA50AB00523C3B /* Mocks */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		655921D727EA50AB00523C3B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				655921D827EA50C800523C3B /* CharacterRepositoryMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		65649B3027E11A2F000C96E1 /* Interfaces */ = {
@@ -720,7 +891,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655921CE27EA414500523C3B /* CharacterListPresenterTests.swift in Sources */,
+				655921CA27EA3C4300523C3B /* UIViewControllerSpy.swift in Sources */,
+				655921D327EA4F6000523C3B /* LocalProviderMock.swift in Sources */,
+				655921BC27EA2EB700523C3B /* CharacterListWireframeMock.swift in Sources */,
+				655921BF27EA352700523C3B /* AnyCollection+Equal.swift in Sources */,
+				655921D927EA50C800523C3B /* CharacterRepositoryMock.swift in Sources */,
+				655921AC27EA0D5300523C3B /* Spy.swift in Sources */,
+				655921B127EA0DB900523C3B /* SpyComparer.swift in Sources */,
+				655921BA27EA2EAB00523C3B /* CharacterListInteractorMock.swift in Sources */,
 				651C602D27E0FF5A00EDD38E /* RickAndMortyTests.swift in Sources */,
+				655921C627EA3AB000523C3B /* CharacterDetailConfiguratorMock.swift in Sources */,
+				655921AF27EA0DA200523C3B /* SpyComparableInterface.swift in Sources */,
+				655921B827EA2E9D00523C3B /* CharacterListPresenterMock.swift in Sources */,
+				655921CC27EA3C5F00523C3B /* UINavigationControllerSpy.swift in Sources */,
+				655921B627EA2E8F00523C3B /* CharacterListViewMock.swift in Sources */,
+				655921D527EA501A00523C3B /* CharacterListInteractorTests.swift in Sources */,
+				655921C827EA3BB600523C3B /* CharacterListWireframeTests.swift in Sources */,
+				655921C227EA370800523C3B /* CharactersFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
