@@ -58,7 +58,7 @@ extension CharacterListPresenter: CharacterListPresenterInterface {
     func didSelectFav(character: Character) {
         addOrDeleteFav(character: character)
         if isFavsShown {
-            let newCharacterList = getFavCharactersSortedById()
+            let newCharacterList = getFavListSortedById()
             if newCharacterList.isEmpty {
                 view?.showNoDataView()
             } else {
@@ -88,7 +88,7 @@ extension CharacterListPresenter: CharacterListPresenterInterface {
                 )
             }
         } else {
-            favCharacterList = interactor.getFavCharacters().sorted(by: { $0.id < $1.id })
+            favCharacterList = getFavListSortedById()
             if favCharacterList.isEmpty {
                 view?.showNoDataView()
             } else {
@@ -168,12 +168,12 @@ private extension CharacterListPresenter {
         return newCharacterList
     }
 
-    func getFavCharactersSortedById() -> [Character] {
+    func getFavListSortedById() -> [Character] {
         interactor.getFavCharacters().sorted(by: { $0.id < $1.id })
     }
 
     func addOrDeleteFav(character: Character) {
         let newValue = Character(from: character, isFav: !character.isFav)
-        character.isFav ? interactor.deleteFav(character: newValue) : interactor.saveFav(character: newValue)
+        character.isFav ? interactor.deleteFav(character: character) : interactor.saveFav(character: newValue)
     }
 }
