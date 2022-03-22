@@ -16,7 +16,6 @@ final class PlaceholderView: UIView {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 4
         label.textAlignment = .center
         label.font = .boldSystemFont(ofSize: 21.0)
         label.numberOfLines = 3

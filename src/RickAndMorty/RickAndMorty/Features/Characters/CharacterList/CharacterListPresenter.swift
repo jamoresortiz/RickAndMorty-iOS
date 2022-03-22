@@ -35,6 +35,12 @@ extension CharacterListPresenter: CharacterListPresenterInterface {
     func viewReady() {
         let viewData = CharacterListViewData(
             title: "Rick & Morty",
+            errorViewTitle: "Error loading data",
+            errorViewButtonTitle: "Retry",
+            noDataViewTitle: "You don't have any favorite character",
+            errorAlertTitle: "Error loading data",
+            errorAlertDescription: "Try it later",
+            errorAlertButtonTitle: "Got it",
             moreResultsButtonTitle: "Tap to show more results"
         )
         view?.initialSetup(with: viewData)

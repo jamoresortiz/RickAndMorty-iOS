@@ -10,6 +10,14 @@ class CharacterListViewController: UIViewController {
     private let activityIndicatorView: UIActivityIndicatorView
     private var placeholderView: PlaceholderView
 
+    // Params
+    private var errorViewTitle: String?
+    private var errorViewButtonTitle: String?
+    private var noDataViewTitle: String?
+    private var errorAlertTitle: String?
+    private var errorAlertDescription: String?
+    private var errorAlertButtonTitle: String?
+
     init(presenter: CharacterListPresenterInterface) {
         self.presenter = presenter
         self.characterTableView = CharacterListTableViewController(style: .grouped)
@@ -34,6 +42,12 @@ extension CharacterListViewController: CharacterListViewInterface {
 
     func initialSetup(with viewData: CharacterListViewData) {
         title = viewData.title
+        errorViewTitle = viewData.errorViewTitle
+        errorViewButtonTitle = viewData.errorViewButtonTitle
+        noDataViewTitle = viewData.noDataViewTitle
+        errorAlertTitle = viewData.errorAlertTitle
+        errorAlertDescription = viewData.errorAlertDescription
+        errorAlertButtonTitle = viewData.errorAlertButtonTitle
         characterTableView.initialSetup(
             moreResultsButtonTitle: viewData.moreResultsButtonTitle,
             completion: { [weak self] result in
@@ -89,8 +103,8 @@ extension CharacterListViewController: CharacterListViewInterface {
     func showErrorView() {
         characterTableView.tableView.isHidden = true
         placeholderView = PlaceholderView(
-            title: "Error loading data",
-            buttonTitle: "Retry",
+            title: errorViewTitle ?? "",
+            buttonTitle: errorViewButtonTitle ?? "",
             buttonActionHandler: { [weak self] in
                 self?.placeholderViewRetry()
             }
@@ -100,13 +114,21 @@ extension CharacterListViewController: CharacterListViewInterface {
 
     func showNoDataView() {
         characterTableView.tableView.isHidden = true
-        placeholderView = PlaceholderView(title: "You don't have any favorite character")
+        placeholderView = PlaceholderView(title: noDataViewTitle ?? "")
         showPlaceholder(placeholderView)
     }
 
     func showErrorAlert() {
-        let alert = UIAlertController(title: "Error loading data", message: "Try it later", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Got it", style: .default, handler: nil))
+        let alert = UIAlertController(
+            title: errorAlertTitle ?? "",
+            message: errorAlertDescription ?? "",
+            preferredStyle: .actionSheet
+        )
+        alert.addAction(UIAlertAction(
+            title: errorAlertButtonTitle ?? "",
+            style: .default,
+            handler: nil
+        ))
         self.present(alert, animated: true, completion: nil)
     }
 
